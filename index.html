@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Niconne&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header-text">Etch A Sketch</header>
+    <div class="grid-buttons">
+        <div class="colors">
+            <div class="stable-colors">
+                <div class="color-green" style="background-color: green;"></div>
+                <div class="color-yellow" style="background-color: rgb(255, 255, 94);"></div>
+                <div class="color-blue" style="background-color: rgb(94, 94, 255);"></div>
+                <div class="color-pink" style="background-color: pink;"></div>
+                <div class="color-red" style="background-color: rgb(250, 88, 88);"></div>
+                <div class="color-not-known" style="background-color: gray;"></div>
+                <div class="color-not-yet" style="background-color: lightgray;"></div>
+            </div>
+            <div class="color-and-text">
+                <div class="color-choose-your-text">Color:</div>
+                <input class="color-choose-your" type="color" id="colorPickerInput" value="#ffffff" onchange="selectColor(this.value)" style="cursor: pointer;" />
+            </div>
+            
+        </div>
+        <div class="outer-grid">
+            <div class="grid"></div>
+        </div>
+        
+        <div class="buttons">
+            <button id="pencilButton">✏️</button>
+            <button id="eraserButton">🧽</button>
+            <button id="color-picker-button">
+                <img src="images/picker.png" alt="Paintbrush" style="width: 24px; height: 24px; align-items: center;margin-top: 9px;">
+            </button>
+            <button id="rainbow-button">🌈</button>
+        </div>
+
+    </div>
+    <div class="size-of-grid-input">
+        <label for="grid-size">Grid Size: <span id="grid-size-value">16</span> x <span id="grid-size-value2">16</span></label>
+        <input type="range" id="grid-size" min="1" max="64" value="16" oninput="updateGridSize(this.value)">
+    </div>
+
+    
+</body>
+</html>
