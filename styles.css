@@ -29,6 +29,7 @@ body{
 }
 .colors{
     gap: 30px;
+    cursor: pointer;
 }
 .grid-buttons,.buttons{
     display: flex;
@@ -56,7 +57,7 @@ body{
     border: 4px solid rgb(207, 169, 82);
     box-shadow: inset 3px 3px 6px 2px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
-
+    
 }
 .color-choose-your{
     box-shadow: inset 2px 1px 5px rgba(0, 0, 0, 0.5);
@@ -75,10 +76,15 @@ body{
 .grid{
     display: flex;
     background-color: aliceblue;
-    width: 576px;
-    height: 576px;
+    width: 574px;
+    height: 574px;
     background-color: rgb(255, 255, 255);
     /*border: 4px solid rgb(207, 169, 82);*/
+}
+.new-div-added-to-grid{
+    background-color: rgb(255, 255, 255);
+    cursor: crosshair;
+    transition: background-color 0.35s ease;
 }
 .outer-grid{
     display: flex;
@@ -92,20 +98,18 @@ body{
     border-radius: 10px;
     
 }
-#pencilButton,#eraserButton,#color-picker-button,#rainbow-button{
+#pencilButton,#eraserButton,#color-picker-button,#rainbow-button,.selected,#reset-button{
     width: 70px;
     height: 70px;
     font-size: 28px;
     cursor: pointer;
     border-radius: 50px;
     border: 4px solid rgb(207, 169, 82);
-    box-shadow:  5px 5px 10px 5px rgba(0, 0, 0, 0.5);
     background-color: rgb(207, 169, 82);    
-    transition:0.3s;
     align-items: center;
     justify-content: center;
 }
-#pencilButton:hover,#eraserButton:hover,#color-picker-button:hover,#rainbow-button:hover{
+#pencilButton:hover,#eraserButton:hover,#color-picker-button:hover,#rainbow-button:hover,#reset-button:hover{
     box-shadow: inset 5px 5px 10px 5px rgba(0, 0, 0, 0.5);
 }
 .size-of-grid-input{
@@ -120,7 +124,7 @@ body{
     font-family: 'Niconne', cursive;
     font-size: 30px;
 }
-.custom-range-slider,input[type="range"] {
+.custom-range-slider,input[type="range"]{
     -webkit-appearance: none;
     width: 100%;
     height: 10px;
@@ -141,4 +145,15 @@ body{
     cursor: pointer;
 }
 
+input[type="color"]{
+    box-shadow: inset 2px 1px 5px rgba(0, 0, 0, 0.5);
+}
+.selected{
+    box-shadow: inset 5px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+.not-selected{
+    transition: 0.3s;
+    box-shadow:  5px 5px 10px 5px rgba(0, 0, 0, 0.5);
+}
 

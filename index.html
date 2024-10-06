@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="javascript.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Niconne&display=swap" rel="stylesheet">
 </head>
 
@@ -28,16 +29,19 @@
             
         </div>
         <div class="outer-grid">
-            <div class="grid"></div>
+            <div class="grid" id = "parent-grid"></div>
         </div>
         
         <div class="buttons">
-            <button id="pencilButton">✏️</button>
-            <button id="eraserButton">🧽</button>
-            <button id="color-picker-button">
+            <button id="pencilButton" class="not-selected">✏️</button>
+            <button id="eraserButton" class="not-selected">🧽</button>
+            <button id="color-picker-button" class="not-selected">
                 <img src="images/picker.png" alt="Paintbrush" style="width: 24px; height: 24px; align-items: center;margin-top: 9px;">
             </button>
-            <button id="rainbow-button">🌈</button>
+            <button id="rainbow-button" class="not-selected">🌈</button>
+            <button id="reset-button" class="not-selected">
+                <img src="images/reset.png" alt="ResetButton" style="width: 24px; height: 24px; align-items: center;margin-top: 9px;">
+            </button>
         </div>
 
     </div>
